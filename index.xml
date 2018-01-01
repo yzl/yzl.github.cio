@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>palimpsest</title>
+    <link>http://yzl.github.io/</link>
+    <description>Recent content on palimpsest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://yzl.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>I go to Seattle alterconf 2015</title>
+      <link>http://yzl.github.io/2015/06/07/alterconf_report/</link>
+      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://yzl.github.io/2015/06/07/alterconf_report/</guid>
+      <description>alterconf was excellent. I tend to find even the most rewarding of conference-going experiences exhausting due to &amp;ldquo;the noise! and the people!&amp;rdquo;. alterconf was very different for me. The fact that it is a single-track conference likely had a lot to do with my great experience. (1) More than that, though, the work Ashe Dryden and her colleagues do to make alterconf a diverse and inclusive space also make it a space that enables attention.</description>
+    </item>
+    
+    <item>
+      <title>References for my alterconf 2015 talk</title>
+      <link>http://yzl.github.io/2015/06/06/alterconf_talk_references/</link>
+      <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://yzl.github.io/2015/06/06/alterconf_talk_references/</guid>
+      <description>I gave a talk at Seattle alterconf last weekend called &amp;ldquo;So You Want to Get Started in Open Source: Advice for the Non-Normative&amp;rdquo;. As usual when I research and write a talk, I end up with way more interesting material than I can fit into the time allotted. In this case, since most of the things I read are readily available online, I decided to post a list of my references.</description>
+    </item>
+    
+    <item>
+      <title>my idiosyncratic ruby environment</title>
+      <link>http://yzl.github.io/2014/04/27/my_idiosyncratic_ruby_environment/</link>
+      <pubDate>Sun, 27 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yzl.github.io/2014/04/27/my_idiosyncratic_ruby_environment/</guid>
+      <description>A couple of people in my office hours at chefconf expressed interest in my knife/chef/ruby setup, so I said I&amp;rsquo;d write a blog post with a few more details. To be clear, this is me sharing my extremely opinionated setup with people who asked, and not me speaking as an employee of Chef. I expect to be dogfooding chefdk for cookbook development, but don&amp;rsquo;t currently have any substantive opinions about it.</description>
+    </item>
+    
+    <item>
+      <title>What I did at the 2013 CascadiaIT conference</title>
+      <link>http://yzl.github.io/2013/03/17/what_i_did_at_the_2013_cascadiait_conference/</link>
+      <pubDate>Sun, 17 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yzl.github.io/2013/03/17/what_i_did_at_the_2013_cascadiait_conference/</guid>
+      <description>Putting the list of talks I attended yesterday at casitconf here so that I can find it again:
+ David Blank-Edelman&amp;rsquo;s keynote,&amp;ldquo;Tales from the bottom of the wishing well, or Why sysadmins still matter&amp;rdquo; Jordan Sissel, &amp;ldquo;Loving your logs with logstash&amp;rdquo; Scott Whyte, &amp;ldquo;An OpenFlow based Internet Exchange Point&amp;rdquo; Ben Kero, &amp;ldquo;LXC (Linux containers) Introduction Plus Stupid (and useful!) Tricks&amp;rdquo; Nicole Forsgren Velasquez and Carolyn Rowland, &amp;ldquo;Usenix Women in Advanced Computing Panel&amp;rdquo; Nathen Harvey, &amp;ldquo;5 Things You Always Wanted to Know About Chef But Were Afraid to Ask&amp;ldquo; Leon Towns-von Stauber, &amp;ldquo;Truth: &amp;nbsp;On Machine Epistemology and the Importance of Dependencies&amp;ldquo; Lightning talks.</description>
+    </item>
+    
+  </channel>
+</rss>

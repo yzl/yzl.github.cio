@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>palimpsest - my idiosyncratic ruby environment</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="palimpsest">
+<meta name="generator" content="Hugo 0.32" />
+
+  
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="http://yzl.github.io/css/tufte.css">
+<link rel="stylesheet" href="http://yzl.github.io/css/hugo-tufte.css">
+<link rel="stylesheet" href="http://yzl.github.io/css/hugo-tufte-override.css">
+
+</head>
+
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<header class="brand">
+  <h1>palimpsest</h1>
+  <h2></h2>
+  <nav class="menu">
+    <ul>
+    
+    </ul>
+</nav>
+
+</header>
+
+<section>
+<h1 class="content-title">
+  
+  <a href="/2014/04/27/my_idiosyncratic_ruby_environment/">my idiosyncratic ruby environment</a>
+  
+</h1>
+
+
+
+  <span class="content-meta">
+    
+
+
+    
+      <i class="fa fa-calendar"></i>
+      &nbsp;Apr 27, 2014
+    
+
+    
+      &nbsp;<i class="fa fa-clock-o"></i>
+      &nbsp;3 min read
+    
+
+    
+  </span>
+
+
+</section>
+
+
+
+<section><p>A couple of people in my office hours at <a href="http://chefconf2014.busyconf.com/schedule">chefconf</a> expressed interest in my knife/chef/ruby setup, so I said I&rsquo;d write a blog post with a few more details.  To be clear, this is me sharing my extremely opinionated setup with people who asked, and not me speaking as an employee of <a href="http://www.getchef.com/chef/">Chef</a>.  I expect to be dogfooding <a href="https://github.com/opscode/chef-dk">chefdk</a> for cookbook development, but don&rsquo;t currently have any substantive opinions about it.  I suspect that confusing things will happen if you try to use the workflow described in this post along with chefdk, so please don&rsquo;t try that.</p>
+
+<p>My general approach for a workstation machine (meaning one where you intend to run knife) is not to install anything under ruby installed via the omnibus package for the chef-client.  Instead, I do the following:</p>
+
+<ol>
+<li>Install my own ruby.  Do not use the system ruby or chef&rsquo;s ruby.  Do not install gems as root.</li>
+<li>Install <a href="http://bundler.io/">bundler</a> with that ruby.  bundler and its deps are the only gems I install directly with that ruby.</li>
+<li>Consider any cookbooks I&rsquo;m developing, knife plugins I need to cooperate with each other, or ruby hacking a project with its own Gemfile.</li>
+<li><a href="http://bundler.io/v1.6/bundle_install.html">Vendor</a> my gems for each project.</li>
+</ol>
+
+<p>(Because someone will ask:  when I install knife plugins, I do put chef in my Gemfile as a dependency, and I start by pinning to the version I have installed on my workstation.  If that turns out to be problematic, I start rolling back versions.)</p>
+
+<p>Yes, it&rsquo;s fussy, but it allows me a lot of flexibility to delete and reinstall things that are not working.  I even do <code>bundle install --path ~/bundles/&lt;application-name&gt;</code> so that I can delete all of my vendored gemsets at once, but that&rsquo;s purely a personal preference.  I like being able to do clean installs of collections of gems that aren&rsquo;t working without disturbing ones that are, or being able to update to the latest omnibus install of the chef-client without breaking work in progress.</p>
+
+<p>I arrived at this workflow over a year or so of trying to maintain a ruby environment suitable for developing cookbooks, running knife commands, and doing regular ruby development.  That year happened to coincide with a lot of rapid change in Chef&rsquo;s ecosystem, which meant that at any given time, at least one of these three not-unreasonable goals seemed impossible.  Not using chef&rsquo;s ruby for development made it a lot easier to update chef on my workstation.  Bypassing the system ruby in favor of installing my own (originally with <a href="https://rvm.io/">rvm</a>, then <a href="http://rbenv.org/">rbenv</a>, now <a href="https://github.com/sstephenson/ruby-build">ruby-build</a> and <a href="https://github.com/postmodern/chruby">chruby</a>) meant that if I got exasperated enough to pave and rebuild my ruby environment from scratch, I could.  Not trying to maintain a single set of gems suitable for running knife plugins and cookbook testing and anything else I might be doing with ruby was for me the biggest win, because it meant I didn&rsquo;t have to worry every time I updated a dependency for one project that it would break something for another project.</p>
+
+<hr />
+
+<p>I&rsquo;m still moving in to this space, but if you have questions, please <a href="https://github.com/yzl/yzl.github.io/issues/new">open an issue.</a></p>
+</section>
+<section>
+  
+
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+	<div class="copyright">
+	<p>
+    
+      &copy; 2018
+    .
+    All rights reserved.
+    
+  </p>
+</div>
+</footer>
+
+
+
+</section>
+</article>
+</div>
+</body>
+</html>
